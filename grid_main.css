@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    font-size: 18px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'header     header  header  header'
+    'barstory   info    info    menu'
+    'barstory   story   story   story';
+}
+
+.container > * {
+    padding: 10px;
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(178, 222, 252);
+}
+
+.head_foot {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 5px;
+    padding: 10px;
+    align-items: center;
+}
+
+.barstory {
+    display: grid;
+    padding: 0px;
+    grid-area: barstory;
+    background-color: lightgreen;
+    place-items: center;
+}
+
+.info {
+    grid-area: info;
+    background-color: #ffffff;
+    padding: 0px;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: lightgreen;
+}
+
+.story {
+    grid-area: story;
+    background-color: rgb(178, 222, 252);
+}
+
+/* ----------------------------------------------------------------------------- */
+
+img {
+    width: 100%;
+}
+
+.header_text {
+    text-align: left;
+}
+
+.header_title {
+    text-align: right;
+    background: white;
+}
+
+.footer_title {
+    text-align: center;
+    background: white;
+}
+
+.barman {
+    text-align: center;
+}
+
+.menu {
+    display: grid;
+    place-items: center;
+    background-color: lightgreen;
+}
+
+ul {
+    list-style: none;
+    place-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.my_menu {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 100%));
+}
+
+.my_menu li {
+    line-height: 100px;
+    background-color: rgb(245, 220, 220);
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 5px;
+    transition: 0.25s;
+    margin: 10px;
+  }
+
+.my_menu a {
+    text-decoration: none;
+    color: #7b7b7d;
+}
+
+
+
+.my_menu li:hover,
+.my_menu li.selected{
+    background-color: rgb(255, 132, 239);
+}
+
+.my_menu li a:hover,
+.my_menu li a.selected{
+    color: #ffffff;
+    font-weight: bold;
+}
